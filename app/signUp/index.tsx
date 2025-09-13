@@ -3,11 +3,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useState } from 'react';
 import { Link, useRouter } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
-import AntDesign from '@expo/vector-icons/AntDesign';
 import { Picker } from '@react-native-picker/picker';
 import InputField from '../../components/InputField';
 import styles from '../../styles/signUpStyle';
 import PrimaryButton from '../../components/PrimaryButton';
+import Entypo from '@expo/vector-icons/Entypo';
 
 export default function Index() {
 
@@ -23,7 +23,7 @@ export default function Index() {
       <ScrollView style={styles.containerScroll} contentContainerStyle={{alignItems: 'center'}}>
         
         <View style={styles.arrowLeft}>
-          <AntDesign name="arrowleft" size={24} color="black" onPress={() => router.navigate('/')} />
+          <Entypo name="chevron-left" size={24} color="black" onPress={() => router.navigate('/')} />
         </View>
         <Image
           style={styles.logo}

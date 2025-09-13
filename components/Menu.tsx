@@ -30,7 +30,10 @@ export default function Menu() {
 
       <TouchableOpacity 
         style={styles.centerButton}
-        onPress={() => router.navigate("/dashboardFamily")}
+        onPress={() => {
+          setHighlighted("none");
+          router.navigate("/dashboardFamily");
+        }}
       >
         <MaterialIcons name="home" size={35} color="#1d1d1dff"/>
       </TouchableOpacity>

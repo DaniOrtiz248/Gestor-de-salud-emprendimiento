@@ -1,4 +1,4 @@
-import { View, StyleSheet, Dimensions, TouchableOpacity, Text } from "react-native"
+import { View, StyleSheet, Dimensions, TouchableOpacity, Text, Image } from "react-native"
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import Animated, {
   useSharedValue,
@@ -54,8 +54,11 @@ export default function Patient(){
             <GestureDetector gesture={pan}>
                 <Animated.View style={[styles.containerPatient, {width: width * 0.9}, animatedStyles]}>
                     {/* Patient Info Here */}
-                    <Text>Patient Name</Text>
-                    <Text>Patient Age</Text>
+                    <Image source={require('../assets/default-profile.webp')} style={{width: 40, height: 40, borderRadius: 20, backgroundColor: '#ffffff'}} />
+                    <View style={{marginLeft: 10, justifyContent: 'center'}}>
+                        <Text>Patient Name</Text>
+                        <Text>Patient Age</Text>
+                    </View>
                 </Animated.View>
             </GestureDetector>
 

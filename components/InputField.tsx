@@ -1,9 +1,9 @@
 import { Text, TextInput, View, StyleSheet } from 'react-native';
 
-export default function InputField({ label, placeholder, keyboardType, onChangeText, style } : { label: string; placeholder: string; keyboardType?: 'default' | 'numeric' | 'email-address' | 'phone-pad' | 'visible-password'; onChangeText: (text: string) => void, style?: object }) {
+export default function InputField({ label, placeholder, keyboardType, onChangeText, style } : { label?: string; placeholder: string; keyboardType?: 'default' | 'numeric' | 'email-address' | 'phone-pad' | 'visible-password'; onChangeText: (text: string) => void, style?: object }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{label}</Text>
+      {label && <Text style={styles.label}>{label}</Text>}
       <TextInput
         placeholder={placeholder}
         keyboardType={keyboardType}

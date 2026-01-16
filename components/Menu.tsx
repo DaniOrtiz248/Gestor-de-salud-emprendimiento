@@ -15,17 +15,17 @@ export default function Menu() {
       <View style={styles.circleGray}></View>
 
       <TouchableOpacity onPress={() => {
-        setHighlighted("linkCaregiver");
-        router.navigate("/linkCaregiver");
+        setHighlighted("medications");
+        router.navigate("/medications/daily");
       }}>
-        <MaterialIcons name="diversity-2" size={25} color={highlighted === "linkCaregiver" ? "#B4E1D6" : "#1d1d1dff"} />
+        <MaterialCommunityIcons name="pill" size={25} color={highlighted === "medications" ? "#B4E1D6" : "#1d1d1dff"} />
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => {
-        setHighlighted("viewPatientsFamily");
-        router.navigate("/viewPatientsFamily");
+        setHighlighted("appointments");
+        router.navigate("/appointments/browse");
       }}>
-        <MaterialIcons name="person-search" size={25} color={highlighted === "viewPatientsFamily" ? "#B4E1D6" : "#1d1d1dff"} />
+        <MaterialIcons name="calendar-month" size={25} color={highlighted === "appointments" ? "#B4E1D6" : "#1d1d1dff"} />
       </TouchableOpacity>
 
       <TouchableOpacity 
@@ -39,11 +39,13 @@ export default function Menu() {
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => {
-        setHighlighted("createPatientFamily");
-        router.navigate("/createPatientFamily");
+        setHighlighted("medical-history");
+        router.navigate("/medical-history");
       }}>
-        <MaterialIcons name="person-add" size={25} color={highlighted === "createPatientFamily" ? "#B4E1D6" : "#1d1d1dff"} />
+        <MaterialCommunityIcons name="clipboard-text" size={25} color={highlighted === "medical-history" ? "#B4E1D6" : "#1d1d1dff"} />
       </TouchableOpacity>
+
+      {/* Removed appointments/medications/news from bottom menu to keep view clean; use header menu */}
 
       <TouchableOpacity onPress={() => {
         setHighlighted("profile");
